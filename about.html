@@ -3,15 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>About Me</title>
+    <link rel="stylesheet" href="style.css">  <!-- CSS 파일 연결 -->
+    <script src="script.js" defer></script>   <!-- JavaScript 파일 연결 -->
 </head>
-<body>
+<body style="background-color: var(--color-bg); color: var(--color-text);">
     <h1>About Me</h1>
     <p>This is my personal introduction page.</p>
-    <a href="/index.html">Home</a>
+    <button class="button" onclick="location.href='index.html'"> <!-- 홈 버튼 -->
+        <div class="button__deco button__deco--1"></div>
+        <div class="button__deco button__deco--2"></div>
+        <span class="button__text">
+            <span class="button__text-inner">Home</span>
+        </span>
+    </button>
 </body>
 </html>
-<head>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-
