@@ -1,0 +1,38 @@
+/* 기본 설정 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-size: 3em;
+    background: linear-gradient(270deg, #ff0000, #00ff00, #0000ff);
+    background-size: 600% 600%;
+    background-clip: text; /* 표준화될 경우를 대비해 추가 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* 텍스트 내부를 투명하게 */
+    animation: wave 10s ease infinite;
+}
+
+@keyframes wave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
