@@ -1,51 +1,25 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* 수직 중앙 정렬 */
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-
-        .btn {
-            font-size: 2.5rem;
-            padding: 10px 20px;
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-            text-align: center;
-            animation: wave 3s infinite; /* 텍스트 색상 애니메이션 */
-        }
-
-        .btn:hover {
-            color: #555; /* 호버 시 색상 변경 */
-        }
-
-        @keyframes wave {
-            0% {
-                color: red;
-            }
-            33% {
-                color: green;
-            }
-            66% {
-                color: blue;
-            }
-            100% {
-                color: red;
-            }
-        }
-    </style>
+    <title>Scrolling Background Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <a href="/introduction" class="btn">Join the My Introduction</a>
+    <div class="background">
+        <div class="bg1" style="background-image: url('{{ url_for('static', filename='background1.jpg') }}');">
+            <h1 class="portfolio-title">Jannet's<br>PORTFOLIO</h1>
+            <h2 class="hello-text">Hello,</h2>
+            <h3 class="student-text">I'm Computer Engineering Student</h3>
+            <h3 class="developer-text">Future System Software Developer</h3>
+            <img src="{{ url_for('static', filename='Person.png') }}" alt="Person" class="person-image">
+        </div>
+        <div class="bg2" style="background-image: url('{{ url_for('static', filename='background2.jpg') }}');">
+            <h2 class="bg2-title">Jannet's Portfolio</h2>
+            <h3 class="fill-text">I will fill...</h3> <!-- 추가된 텍스트 -->
+        </div>
+        <div class="bg3" style="background-image: url('{{ url_for('static', filename='background3.jpg') }}');"></div>
+    </div>
 </body>
 </html>
