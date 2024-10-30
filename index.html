@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Background Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background">
+        <div class="bg1" style="background-image: url('{{ url_for('static', filename='background1.jpg') }}');">
+            <h1 class="portfolio-title">Jannet's<br>PORTFOLIO</h1>
+            <h2 class="hello-text">Hello,</h2>
+            <h3 class="student-text">I'm Computer Engineering Student</h3>
+            <h3 class="developer-text">Future System Software Developer</h3>
+            <img src="{{ url_for('static', filename='Person.png') }}" alt="Person" class="person-image">
+        </div>
+        <div class="bg2" style="background-image: url('{{ url_for('static', filename='background2.jpg') }}');">
+            <h2 class="bg2-title">Jannet's Portfolio</h2>
+            <h3 class="fill-text">I will fill...</h3> <!-- 추가된 텍스트 -->
+        </div>
+        <div class="bg3" style="background-image: url('{{ url_for('static', filename='background3.jpg') }}');"></div>
+    </div>
+</body>
+</html>
